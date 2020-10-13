@@ -1,6 +1,8 @@
 require('dotenv').config()
 const express = require('express');
 const app = express()
+//const QRCode = require('qrcode')
+
 // const mongoose = require('mongoose');
 
 // mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -16,7 +18,16 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.listen(process.env.PORT||3000, () => {
+// app.get('/qrcode', async (req, res) => {
+//     let urlList = []
+//     for (let i = 0; i < 4; i++) {
+//         let url = await QRCode.toDataURL(`http://localhost:3000/test/${i}`)
+//         urlList.push(url)
+//     }
+//     console.log(urlList);
+//     res.render('index', { urlList })
+// })
+
+app.listen(process.env.PORT || 3000, () => {
     console.log('server listening at 3000')
 })
-
