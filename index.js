@@ -9,7 +9,6 @@ const app = express()
 //         console.log('connected to db')
 //     })
 
-
 /*  Yahya   */
 // const authRoutes = require('./routes/authRoutes')
 const cookieSession = require('cookie-session')
@@ -49,11 +48,18 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
+/*Yahya*/
+app.get('/user/companyID/tableID', (req, res) => {
+    res.render('userAnmeldung')
+})
+
+app.get('/user/companyID/tableID/userInfo', (req, res) => {
+    res.render('userInfo')
+})
+
+app.get('/user/companyID/tableID/companyInfo', (req, res) => {
+    res.render('companyInfo')
+})
 
 
-
-
-
-
-
-
+app.get('/')
