@@ -12,10 +12,20 @@ const app = express()
 
 app.use(express.static('public'))
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
     res.render('index')
+})
+
+app.get('/company/input01', (req, res) => {
+    res.render('companyInput01')
+})
+
+app.post('/company/input01', (req, res) => {
+    console.log(req.body);
+    res.redirect('/company/input01')
 })
 
 // app.get('/qrcode', async (req, res) => {
