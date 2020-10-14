@@ -1,0 +1,144 @@
+.googleLogin{
+    background-color: yellow;
+    width: 400px;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#center-clock{
+    width: 22%;
+    display: block;
+    margin: 3vh 39.5% -4vh;
+}
+#center-text{
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    color: #314259;
+}
+#center-p{
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #B1BDC6;
+    margin-top: 2vh;
+}
+span{
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+}
+#hero{
+    background: url(/Bilder/Frame.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10vh;
+    padding-bottom: 45px;
+}
+.but{
+    width: 20%;
+    height: 8vh;
+    background: #FFFFFF;
+    box-shadow: 10px 12px 19px rgba(255, 96, 96, 0.2);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;   
+    color: #4A4A4A;
+    margin-top: 30vh;
+}
+.but1{
+    width: 20%;
+    height: 8vh;
+    background: #000000;
+    box-shadow: 10px 12px 23px rgba(255, 96, 96, 0.3);
+    border-radius: 30px;
+    margin-top: 2vh;
+    opacity: 0.1;
+}
+.logIn{
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    top: -40px;
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif; 
+    font-weight: bold;
+    color: white;
+}
+.fragen{
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 3vh 0 0;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+.goo{
+    padding-left: 3%;
+}
+.goo1{
+    padding-left: 13%;
+}
+@media only screen and (max-width: 414px){
+    #center-clock{
+        width: 62%;
+        display: block;
+        margin: 8vh auto 0;
+    }
+    #center-text{
+        margin-top: -5vh;
+    }
+    #center-p{
+        margin-top: 1vh;
+    }
+    #hero{
+        background: url(/Bilder/BG.png);
+        background-size: 100% 100%;
+        margin-top:-3vh;
+        box-sizing: border-box;
+        padding:40px 0;
+    }
+    .but{
+        width: 70%;
+        height: 8vh;
+        background: #FFFFFF;
+        box-shadow: 10px 12px 19px rgba(255, 96, 96, 0.2);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-family: 'Fira Sans', sans-serif;   
+        color: #4A4A4A;
+        margin-top: 19vh;
+    }
+    .logIn{
+        position: relative;
+        justify-content: space-between;
+        display: flex;
+        top: -38px;
+        text-decoration: none;
+        color: white;
+    }
+    .but1{
+        width: 70%;
+        height: 8vh;
+        background: #000000;
+        box-shadow: 10px 12px 23px rgba(255, 96, 96, 0.3);
+        border-radius: 30px;
+        margin-top: 2vh;
+        opacity: 0.1;
+    }
+    .fragen{
+        font-family: 'Fira Sans', sans-serif;
+        text-decoration: none;
+        color: white;
+    }
+}

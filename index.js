@@ -1,32 +1,43 @@
 require('dotenv').config()
 const express = require('express');
 const app = express()
+const cookieSession = require('cookie-session')
+require('./config/passport')
+const passport = require('passport');
+const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes')
+const companyRoutes = require('./routes/companyRoutes')
+const profileRoutes = require('./routes/profileRoutes')
 //const QRCode = require('qrcode')
 
-// const mongoose = require('mongoose');
+/*  Yahya   */
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('connected to db');
+    })
 
-// mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => {
-//         console.log('connected to db')
-//     })
+app.use(cookieSession({
+    name: 'session',
+    maxAge: 7 * 24 * 60 * 60 * 1000,
+    keys: [process.env.cookieKey]
+}))
 
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs')
 
+app.use('/auth', authRoutes)
+app.use('/profile', profileRoutes)
+app.use('/company', companyRoutes)
+
 app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.get('/company/input01', (req, res) => {
-    res.render('companyInput01')
-})
 
-app.post('/company/input01', (req, res) => {
-    console.log(req.body);
-    res.redirect('/company/input01')
-})
 
 // app.get('/qrcode', async (req, res) => {
 //     let urlList = []
