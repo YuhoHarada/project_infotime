@@ -35,11 +35,12 @@ passport.use(new GoogleStrategy({
                     firstName: profile.name.givenName,
                     lastName: profile.name.familyName,
                     emails: profile.emails[0].value,
-                    picture: profile.photos[0].value
+                    picture: profile.photos[0].value,
+                    signUp: true
                 }).save()
-                    .then(() => {
+                    .then((result) => {
                         console.log('user Created');
-                        done(null, user)
+                        done(null, result)
                     })
             }
         })

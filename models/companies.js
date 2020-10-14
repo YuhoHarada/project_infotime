@@ -8,7 +8,13 @@ const companySchema = new Schema({
     lastName: String,
     emails: String,
     picture: String,
-    companyName: String
+    signUp: Boolean,
+    companyName: String,
+    typeOfIndustry: String,
+    address: Object,
+    tables: Array,
+    pdf: Array,
+    customerData: Array
 })
 
 const companyGoogleSchema = mongoose.model('googleUser', companySchema)
