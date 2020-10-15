@@ -7,9 +7,9 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes')
 const companyRoutes = require('./routes/companyRoutes')
+const userRoutes = require('./routes/userRoutes')
 const profileRoutes = require('./routes/profileRoutes')
 
-/*  Yahya   */
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('connected to db');
@@ -35,20 +35,7 @@ app.set('view engine', 'ejs')
 app.use('/auth', authRoutes)
 app.use('/profile', profileRoutes)
 app.use('/company', companyRoutes)
-
+app.use('/user', userRoutes)
 app.get('/', (req, res) => {
     res.render('index')
-})
-
-/*Yahya*/
-app.get('/user/companyID/tableID', (req, res) => {
-    res.render('userAnmeldung')
-})
-
-app.get('/user/companyID/tableID/userInfo', (req, res) => {
-    res.render('userInfo')
-})
-
-app.get('/user/companyID/tableID/companyInfo', (req, res) => {
-    res.render('companyInfo')
 })

@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('partials/head.ejs') %>
 
 <body>
     <h1>Wir brauchen ein Paar Informationen um dich an deinem Platz anmelden zu können!</h1>
-    <form action="user/infos" method="post">
+    <form action="/user/userInfo/<%= companyID %>/<%= tableID %>" method="post">
         <input type="text" name="name" id="" placeholder="Name...">
-        <input type="text" name="strasse" id="" placeholder="Straße...">
-        <input type="text" name="plz+stadt" id="" placeholder="PLZ und Stadt...">
-        <input type="text" name="number" id="" placeholder="Telefonnummer...">
+        <input type="text" name="street" id="" placeholder="Straße...">
+        <input type="text" name="city" id="" placeholder="PLZ und Stadt...">
+        <input type="text" name="phone" id="" placeholder="Telefonnummer...">
         <label for="agb">DSGvO&AGBs</label>
         <input type="checkbox" name="agb" id="" required>
+        <input type="submit" value="Weiter">
     </form>
-    <a href="/user/companyID/tableID/companyInfo">Weiter</a>
+
 </body>
 
 </html>
