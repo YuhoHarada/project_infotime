@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const Company = require('./../models/companies')
+const QRCode = require('qrcode')
+const formidable = require("formidable")
+const path = require('path')
 
 const checkAuth = (req, res, next) => {
     if (req.user.signUp) {
@@ -75,20 +78,54 @@ router.get('/input04', (req, res) => {
     res.render('companyInput04')
 })
 
-router.post('/input04', (req, res) => {
+router.post('/input04', (req, res, next) => {
     console.log(req.body)
-    let update = {}
-    update.signUp = false
-    let update1 = { $set: update }
-    Company.findOneAndUpdate({ _id: req.user.id }, update1, { new: true, useFindAndModify: false })
-        .then(result => {
-            res.redirect('/company/inputlast')
-        })
-        .catch(err => console.error(`Failed to find and update document: ${err}`))
+    const form = formidable({
+        uploadDir: "./uploads",
+        keepExtensions: true
+    })
+    form.parse(req, (err, fields, files) => {
+        if (err) {
+            next(err);
+            return;
+        }
+        let update = {}
+        if (files.uploadfile.size != "") {
+            update.pdf = []
+            update.pdf.push({ url: '/' + path.basename(files.uploadfile.path) })
+        }
+        update.signUp = false
+        console.log(update);
+        let update1 = { $set: update }
+        Company.findOneAndUpdate({ _id: req.user.id }, update1, { new: true, useFindAndModify: false })
+            .then(result => {
+                res.redirect('/company/inputlast')
+            })
+            .catch(err => console.error(`Failed to find and update document: ${err}`))
+    })
 })
 
 router.get('/inputlast', (req, res) => {
     res.render('companyInputlast')
+})
+
+router.get('/qrcode', async (req, res) => {
+    let urlList = []
+    const result = await Company.find({ _id: req.user.id })
+    const tables = result[0].tables
+    for (let i = 0; i < tables.length; i++) {
+        let url = await QRCode.toDataURL(tables[i])
+        urlList.push(url)
+    }
+    res.render('companyqrCodes', { urlList })
+})
+
+router.get('/faq', (req, res) => {
+    res.render('companyFaQ')
+})
+
+router.get('/settings', (req, res) => {
+    res.render('companysettings', { user: req.user })
 })
 
 module.exports = router
