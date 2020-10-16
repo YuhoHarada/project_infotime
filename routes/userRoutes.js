@@ -37,8 +37,12 @@ router.post('/userInfo/:companyID/:tableID', async (req, res) => {
 })
 
 
-router.get(`/user/userInfo/${req.params.companyID}/${req.params.tableID}`, (req, res) => {
-    res.render('companyInfo')
+// router.get(`/user/userInfo/${req.params.companyID}/${req.params.tableID}`, (req, res) => {
+//     res.render('companyInfo')
+// })
+
+router.get('/faq', (req, res) => {
+    res.render('userFaq')
 })
 
 module.exports = router
