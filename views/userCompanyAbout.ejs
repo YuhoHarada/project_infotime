@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/userFormStyle.css">
 </head>
-<body>
-    <h1>Firmendaten</h1>
-    <img src="<%= companyData.logo %> " alt="">
-    <p>Name: <%= companyData.companyName %> </p>
-    <p>Art der Industrie: <%= companyData.typeOfIndustry %> </p>
-    <p>Adresse: <%= companyData.address.street %>, <%= companyData.address.postalcode %> <%= companyData.address.city %> </p>
-    <p>Tischzahl: <%= companyData.tables.length %> </p>
+
+<body id="companyAbout">
+    <img id="clockForm" src="/Bilder/clockForm.svg" alt="">
+    <section id="hero1">
+        <img class="companyLogo" src="<%= companyData.logo %> " alt="">
+        <h1><%= companyData.companyName %> </h1>
+        <p><%= companyData.typeOfIndustry %> </p>
+        <h2><%= companyData.address.street %>, <%= companyData.address.postalcode %>
+            <%= companyData.address.city %> </h2>
+    </section>
 </body>
+
 </html>

@@ -26,7 +26,7 @@
     font-weight: 700;
 }
 #hero{
-    background: url(./Bilder/Frame.png) bottom/100% 60% no-repeat;
+    background: url("/Bilder/Frame.png") bottom/100% 60% no-repeat;
     height: calc(100vh - 40px) ;
     display: flex;
     flex-direction: column;
@@ -42,6 +42,7 @@
     height: 8vh;
     background: #FFFFFF;
     box-shadow: 10px 12px 19px rgba(255, 96, 96, 0.2);
+    border: none;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -58,6 +59,9 @@
     border-radius: 30px;
     margin-top: 2vh;
     opacity: 0.1;
+}
+.but2{
+    margin-bottom: 10vh;
 }
 .logIn{
     position: relative;
@@ -107,16 +111,26 @@
     display: block;
     margin: 15vh auto 5vh;
 }
+#userThanks{
+    text-align: center;
+}
 #welcomeH{
     font-family: 'Lato', sans-serif;
     color: #414B6B;
     text-align: center;
+}
+#userThanks #welcomeH{
+    margin-bottom: 50px;
 }
 #welcomeP{
     font-family: 'Lato', sans-serif;
     color: #90A4B7;
     text-align: center; 
     padding-top: 7vh;
+}
+#userThanks #welcomeP{
+    display: inline-block;
+    width: 80vw;
 }
 .welcomeA{
     display: flex;

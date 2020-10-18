@@ -1,12 +1,16 @@
 <%- include('partials/head.ejs') %>
 
 <body>
-    User Anmelden
-    Willkommen bei <%= companyName %> Tisch <%= Number(tableID) + 1 %> !!
-    <form action="/user/userInfo/<%= companyID %>/<%= tableID %>" method="get">
-        <input type="submit" value="Anmelden">
-    </form>
-    <a href="/user/faq">Fragen? FAQ</a>
+    <section id="hero">
+        <img id="center-clock" src="/Bilder/clock.png" alt="">
+        <h1 id="center-text">Info<span class="bold">Time</span></h1>
+        <p id="center-p">Willkommen bei <%= companyName %> Tisch <%= Number(tableID) + 1 %> !!</p>
+        <div class="grow"></div>
+        <form action="/user/userInfo/<%= companyID %>/<%= tableID %>" method="get">
+            <input class="but but2" type="submit" value="Anmelden">
+        </form>
+        <a class="fragen" href="/user/faq">Fragen? <strong>FAQ</strong></a>
+    </section>
 </body>
 
 </html>

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#clockForm{
+    width: 200px;
+    display: block;
+    margin: 2vh auto;
+    transform: translateX(14px);
+}
+#pForm{
+    font-family: 'Lato', sans-serif;
+    width: 80%;
+    margin: -11vh auto 3vh;
+    font-weight: 400;
+    color: #90A4B7;
+    font-size: 20px;
+}
+#hero{
+    background:  #F9F9F9;
+    padding: 2vh 0 0;
+}
+.groeße{
+    display: block;
+    width: calc(90% - 40px);
+    font-size: 20px;
+    padding: 20px;
+    box-shadow: 0px 6px 18px rgba(144, 164, 183, 0.22);
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    margin: 2vh auto;
+}
+.groeße::placeholder{
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 5%;
+    color: #C9D3DC;
+}
+#dsg{
+    font-family: 'Lato', sans-serif;
+    color: #90A4B7;
+    font-size: 1.3em;
+}
+#rad{
+    display: inline-block;
+    margin: 3vh 2% 40px 5%;
+}
+#weiterForm{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6em;
+    color: white;
+    background: linear-gradient(225deg, #FE979C 0%, #FFA993 100%);
+    border: none;
+    width: 100%;
+    padding: 3.5vh 0;
+}
+#hero1{
+    font-family: 'Lato', sans-serif;
+    padding: 7vh 0 0;
+    position: relative;
+    background: url('/Bilder/BgUser.png') center bottom -150px/contain no-repeat,
+                linear-gradient(#F9F9F9 0%, #F9F9F9 100%);
+    background-attachment: fixed;
+    min-height: calc(89vh - 200px);
+}
+#companyAbout #hero1{
+    min-height: calc(96vh - 320px);
+    padding: 120px 0 0;
+    text-align: center;
+    color: #90A4B7;
+}
+#companyAbout #hero1 h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#companyAbout #hero1 p{
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+#companyAbout #hero1 h2{
+    font-size: 18px;
+    font-weight: 300;
+}
+#pSpeise{
+    font-family: 'Lato', sans-serif;
+    width: 80%;
+    margin: -7vh auto 4vh;
+    font-weight: 400;
+    color: #90A4B7;
+    font-size: 1.5em;
+}
+.buttonSpeise{
+    display: flex;
+    align-items: center;
+    width:calc(90% - 40px);
+    background: white;
+    color: #93A6B9;
+    box-shadow: 0px 6px 18px rgba(144, 164, 183, 0.22);
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    margin: 2vh auto;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    text-align: left;
+    font-size: 20px;
+    padding: 20px;
+}
+.companyLogo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #FFA99380;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 575px){
+    #hero1{
+        background-size: 100%;
+        background-position: center bottom -55vw;
+    }
+}

@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/userFormStyle.css">
 </head>
 
 <body>
-    Vielen Dank für deine papiersparende Anmeldung!
-    <a href="/user/company/<%= companyID %> ">Über uns</a>
-    <% pdf.forEach(elt => { %>
-        <a href="<%= elt.url %> "><%= elt.title %> </a>
-    <% }) %>
-    <a href="/user/logout/<%= customerID %> ">Abmelden</a>
+    <img id="clockForm" src="/Bilder/clockForm.svg" alt="">
+    <p id="pSpeise">Vielen Dank für deine papiersparende Anmeldung!</p>
+    <section id="hero1">
+        <form action="">
+            <a class="buttonSpeise noch" href="/user/company/<%= companyID %> ">Über uns</a>
+            <% pdf.forEach(elt => { %>
+                <a class="buttonSpeise" href="<%= elt.url %> "><%= elt.title %> </a>
+            <% }) %>
+            <a class="buttonSpeise" href="/user/logout/<%= customerID %> ">Abmelden</a>
+        </form>
+    </section>
 </body>
 
 </html>

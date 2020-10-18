@@ -1,18 +1,27 @@
-<%- include('partials/head.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/userFormStyle.css">
+</head>
 
 <body>
-    <h1>Wir brauchen ein Paar Informationen um dich an deinem Platz anmelden zu können!</h1>
-    <form action="/user/userInfo/<%= companyID %>/<%= tableID %>" method="post">
-        <input type="text" name="name" id="" placeholder="Name...">
-        <input type="text" name="street" id="" placeholder="Straße...">
-        <input type="text" name="postalcode" id="" placeholder="PLZ...">
-        <input type="text" name="city" id="" placeholder="Stadt...">
-        <input type="text" name="phone" id="" placeholder="Telefonnummer...">
-        <label for="agb"><a href="#">DSGvO&AGBs</a></label>
-        <input type="checkbox" name="agb" id="" required>
-        <input type="submit" value="Weiter">
-    </form>
-
+    <img id="clockForm" src="/Bilder/clockForm.svg" alt="">
+    <p id="pForm">Wir brauchen ein parr Informationen um dich an deinem Platz anmelden zu können!</p>
+    <section id="hero">
+        <form action="/user/userInfo/<%= companyID %>/<%= tableID %>" method="post">
+            <input class="groeße" type="text" name="name" id="" placeholder="Name...">
+            <input class="groeße" type="text" name="street" id="" placeholder="Straße...">
+            <input class="groeße" type="text" name="postalcode" id="" placeholder="PLZ...">
+            <input class="groeße" type="text" name="city" id="" placeholder="Stadt...">
+            <input class="groeße" type="text" name="phone" id="" placeholder="Telefonnummer...">
+            <input id="rad" type="checkbox" name="agb" id="" required><label id="dsg" for="agb"><a href="#">DSGvO & AGBs</a></label>
+            <input id="weiterForm" type="submit" value="Weiter">
+        </form>
+    </section>
 </body>
 
 </html>
