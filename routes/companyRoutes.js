@@ -40,6 +40,8 @@ router.post('/input01/:isFirst', (req, res) => {
         update.companyName = fields.companyName
         if (files.logo.size != "") {
             update.logo = '/' + path.basename(files.logo.path)
+        } else {
+            update.logo = '/Bilder/noimage.png'
         }
         update.typeOfIndustry = fields.typeOfIndustry
         let update1 = { $set: update }
