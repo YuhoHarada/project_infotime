@@ -6,8 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/company/input03" method="post">
-        <input type="number" name="tables" placeholder="0-100 Tische" id="" required>
+    <% if (user.signUp) { %>
+        <form action="/company/input03/first" method="post">
+    <% } else { %>
+        <form action="/company/input03/update" method="post">
+    <% } %>
+        <input type="number" name="tables" placeholder="1-100 Tische" id="" required>
+        <% if (!user.signUp) { %>
+            <input type="radio" name="BothOrNot" id="onlyTable" value="onlyTable" checked>
+            <label for="onlyTable">Zunahme oder Abnahme nur der Anzahl der Tische</label>
+            <input type="radio" name="BothOrNot" id="both" value="both">
+            <label for="both">Ändere QR-Code ebenfalls</label>
+            <span>! Wenn Sie bereits QR-Codes auf der Tabelle platziert haben, müssen Sie diese neu positionieren. !</span>
+        <% } %>
         <input type="submit" value="weiter">
     </form>
 </body>

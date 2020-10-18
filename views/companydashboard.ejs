@@ -8,16 +8,22 @@
 </head>
 
 <body>
-    dashboard
-    <% user.customerData.forEach(elt => { %>
+    dashboard <br>
+    <div>
+        <a href="/company">dashboard</a>
+        <a href="/company/settings">settings</a>
+        <a href="/company/faq">Help</a>
+        <a href="/auth/logout">Sign out</a>
+    </div>
+    <% customer.forEach(elt => { %>
     <div>
         Table: <%= elt.table %> <br>
-        From: <%= elt.stayfrom %> <br>
-        To: <%= elt.stayto %> <br>
+        From: <%= elt.stayFromStr %> <br>
+        To: <%= elt.stayToStr %> <br>
         <br>
-        Name: <%= elt.name %> <br>
-        Address: <%= elt.address.street %>, <%= elt.address.postalcode %> <%= elt.address.city %> <br>
-        Phone: <%= elt.phone %> <br>
+        Name: <%= elt.userName %> <br>
+        Address: <%= elt.userStreet %>, <%= elt.userCode %> <%= elt.userCity %> <br>
+        Phone: <%= elt.userPhone %> <br>
     </div><br><br>
     <% }) %>
 </body>

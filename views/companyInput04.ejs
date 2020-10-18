@@ -6,9 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/company/input04" enctype="multipart/form-data" method="post">
-        <input type="file" name="uploadfile" id="">
+    <% if (user.signUp) { %>
+        <form action="/company/input04/first" enctype="multipart/form-data" method="post">
+    <% } else { %>
+        <form action="/company/input04/update" enctype="multipart/form-data" method="post">
+    <% } %>
+        <div id="inputFileBox">
+            <input type="text" name="fileTitle1" id="" placeholder="File Name z.B. Speisekarte, Getränke...">
+            <input type="file" name="uploadfile1" id="">
+        </div>
+        <input id="plusBTN" type="button" value="+" onclick="addFile()">
         <input type="submit" value="weiter">
     </form>
+    <script>
+        let count = 1
+        function addFile(){
+            count++
+            document.getElementById("inputFileBox").innerHTML += `
+            <input type="text" name="fileTitle${count}" id="" placeholder="File Name z.B. Speisekarte, Getränke...">
+            <input type="file" name="uploadfile${count}" id="">
+            `
+            if(count == 3){
+                document.getElementById("plusBTN").style.display = "none"
+                return
+            }
+        }
+    </script>
 </body>
 </html>

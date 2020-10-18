@@ -10,11 +10,12 @@ const companySchema = new Schema({
     picture: String,
     signUp: Boolean,
     companyName: String,
+    logo: String,
     typeOfIndustry: String,
     address: Object,
     tables: Array,
-    pdf: Array,
-    customerData: Array
+    randomNum: Number,
+    pdf: Array
 })
 
 const companyGoogleSchema = mongoose.model('googleUser', companySchema)

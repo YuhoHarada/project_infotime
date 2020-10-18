@@ -39,3 +39,7 @@ app.use('/user', userRoutes)
 app.get('/', (req, res) => {
     res.render('index')
 })
+
+app.use((req, res) => {
+    res.render('404')
+})

@@ -1,8 +1,14 @@
 <%- include('partials/head.ejs') %>
 
 <body>
-    <form action="/company/input01" method="post">
+    <% if (user.signUp) { %>
+        <form action="/company/input01/first" enctype="multipart/form-data" method="post">
+    <% } else { %>
+        <form action="/company/input01/update" enctype="multipart/form-data" method="post">
+    <% } %>
         <input type="text" name="companyName" id="" placeholder="Firmenname" required>
+        <label for="">Logo</label>
+        <input type="file" name="logo" id="">
         <input type="radio" name="typeOfIndustry" id="restaurant" value="restaurant" checked>
         <label for="restaurant">Restaurant</label>
         <input type="radio" name="typeOfIndustry" id="bar" value="bar">

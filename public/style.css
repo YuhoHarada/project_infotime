@@ -63,7 +63,7 @@
     position: relative;
     justify-content: space-between;
     display: flex;
-    top: -40px;
+    top: -44px;
     text-decoration: none;
     font-family: 'Fira Sans', sans-serif; 
     font-weight: bold;
@@ -83,53 +83,26 @@
 .goo1{
     padding-left: 13%;
 }
-@media only screen and (max-width: 375px){
+
+@media only screen and (max-width: 575px){
     #center-clock{
-        width: 62%;
         display: block;
-        margin: 8vh auto 0;
+        width: 70%;
+        margin: 1.5vh auto 0;
     }
     #center-text{
-        margin-top: -5vh;
-    }
-    #center-p{
-        margin-top: 1vh;
-    }
-    #hero{
-        background-image: url(./Bilder/BG.png);
-    }
-    .but{
-        width: 70%;
-        height: 8vh;
+        margin: -7vh 0 -1vh;
     }
     .logIn{
-        top: -40px;
-    }
-    .but1{
-        width: 70%;
-        height: 8vh;
-        margin-top: 2vh;
+        top: -41px;
     }
     .fragen{
         display: block;
-        padding-top: 5vh;
-        color: white;
-    }
-}
-@media only screen and (max-width: 320px){
-    #center-clock{
-        display: block;
-        margin: 1.5vh auto 1vh;
-    }
-    .logIn{
-        top: -32px;
-    }
-    .fragen{
-        display: block;
-        padding-top: 2vh;
+        margin-bottom: -2vh;
         font-size: 1em;
     }
 }
+
 #icon{
     display: block;
     margin: 15vh auto 5vh;
@@ -149,9 +122,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 10vh auto;
-    width: 18%;
-    height: 8vh;
+    width: 200px;
+    padding: 10px;
     background: linear-gradient(225deg, #FE979C 0%, #FFA993 100%);
     box-shadow: 0px 4px 18px rgba(254, 151, 156, 0.182292);
     border-radius: 100px;
@@ -170,34 +144,4 @@
     text-align: center;
     color: #B1BFCC;
     margin-top: 25vh;
-}
-@media only screen and (max-width: 375px){
-    #welcomeH{
-        font-size: 1.4em;
-        width: 60%;
-        margin: 0 auto;
-    }
-    #welcomeP{
-        width: 80%;
-        text-align: left;
-        color: #90A4B7;
-        margin: 0 auto;
-    }
-    .welcomeA{
-        margin: 9vh auto;
-        width: 58%;
-    }
-    #aFragen{
-        margin-top: 20vh;
-    }
-}
-@media only screen and (max-width: 320px){
-    #welcomeH{
-        font-size: 1.4em;
-        width: 70%;
-        margin: 0 auto;
-    }
-    #aFragen{
-        margin-top: 12vh;
-    }
 }

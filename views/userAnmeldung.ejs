@@ -2,7 +2,7 @@
 
 <body>
     User Anmelden
-    Willkommen bei Demonis Pizza
+    Willkommen bei <%= companyName %> Tisch <%= Number(tableID) + 1 %> !!
     <form action="/user/userInfo/<%= companyID %>/<%= tableID %>" method="get">
         <input type="submit" value="Anmelden">
     </form>

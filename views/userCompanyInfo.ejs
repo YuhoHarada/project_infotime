@@ -9,9 +9,11 @@
 
 <body>
     Vielen Dank für deine papiersparende Anmeldung!
-    <a href="">Über uns</a>
-    <a href="">Speisekarte</a>
-    <a href="/user/companyID/tableID">Abmelden</a>
+    <a href="/user/company/<%= companyID %> ">Über uns</a>
+    <% pdf.forEach(elt => { %>
+        <a href="<%= elt.url %> "><%= elt.title %> </a>
+    <% }) %>
+    <a href="/user/logout/<%= customerID %> ">Abmelden</a>
 </body>
 
 </html>
