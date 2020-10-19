@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/userFormStyle.css">
     <title>Document</title>
 </head>
-<body>
-    <h1>Firmendaten</h1>
-    <p>Geschäftsführer: <%= user.firstName %> <%= user.lastName %></p>
-    <p>Name: <%= user.companyName %>  <a href="/company/input01">Ändern</a></p>
-    <p>Art der Industrie: <%= user.typeOfIndustry %> </p>
-    <p>Adresse: <%= user.address.street %>, <%= user.address.postalcode %> <%= user.address.city %> <a href="/company/input02">Ändern</a></p>
-    <p>Tischzahl: <%= user.tables.length %> <a href="/company/input03">Ändern</a></p>
-    <p>Speisekarte: 
-        <% user.pdf.forEach(elt => { %>
-            <a href="<%= elt.url %> "><%= elt.title %> </a> 
-        <% }) %>
-        <a href="/company/input04">Ändern</a>
-    </p>
+<body id="companyAbout" class="companyData">
+    <img id="clockForm" src="/Bilder/clockForm.svg" alt="">
+    <section id="hero1">
+        <img class="companyLogo" src="<%= user.logo %> " alt="">
+        <h1><%= user.companyName %> <a class="btn" href="/company/input01">Ändern</a></h1>
+        <p><%= user.typeOfIndustry %> </p>
+        <h2><%= user.address.street %>, <%= user.address.postalcode %> <%= user.address.city %> <a class="btn" href="/company/input02">Ändern</a></h2>
+        <p>Geschäftsführer: <%= user.firstName %> <%= user.lastName %></p>
+        <p>Tischzahl: <%= user.tables.length %> <a class="btn" href="/company/input03">Ändern</a></p>
+        <p>Speisekarte: 
+            <% user.pdf.forEach(elt => { %>
+                <a href="<%= elt.url %> "><%= elt.title %> </a> 
+            <% }) %>
+            <a class="btn" href="/company/input04">Ändern</a>
+        </p>
+    </section>
 </body>
 </html>

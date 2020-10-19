@@ -76,6 +76,9 @@
     text-align: center;
     color: #90A4B7;
 }
+#companyAbout.companyData #hero1{
+    padding-bottom: 30vh;
+}
 #companyAbout #hero1 h1{
     font-size: 30px;
     margin-bottom: 10px;
@@ -87,6 +90,7 @@
 #companyAbout #hero1 h2{
     font-size: 18px;
     font-weight: 300;
+    margin-bottom: 30px;
 }
 #pSpeise{
     font-family: 'Lato', sans-serif;
@@ -123,6 +127,16 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#companyAbout .btn{
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #FE979C;
+    color: white;
+    border-radius: 20px;
+    margin-left: 10px;
 }
 
 @media only screen and (min-width: 575px){
