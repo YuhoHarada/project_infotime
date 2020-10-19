@@ -51,7 +51,8 @@
         padding: 0;
     }
     .qrField .qrcode{
-        height: 100vh;
+        height: 277mm;
         padding: 0;
+        margin: 0;
     }
 }
