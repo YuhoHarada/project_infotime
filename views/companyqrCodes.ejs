@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <% urlList.forEach(elt => { %>
-        <img src="<%= elt %> " alt="">
-    <% }) %>
+<%- include('partials/head.ejs') %>
+
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs', {user}) %>
+    <main class="mainQr">
+        <section class="companyText">
+            <h3 class="h3" style="text-align: center;">Deine QR Codes</h3>
+        </section>
+        <section class="qrField">
+            <% urlList.forEach((elt, i) => { %>
+                <figure>
+                    <img src="<%= elt %> " alt="">
+                    <figcaption>Tisch <%= i + 1 %> </figcaption>
+                </figure>
+            <% }) %>
+        </section>
+    </main>
 </body>
+
 </html>

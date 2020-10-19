@@ -1,36 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <% if (user.signUp) { %>
-        <form action="/company/input04/first" enctype="multipart/form-data" method="post">
-    <% } else { %>
-        <form action="/company/input04/update" enctype="multipart/form-data" method="post">
-    <% } %>
-        <div id="inputFileBox">
-            <input type="text" name="fileTitle1" id="" placeholder="File Name z.B. Speisekarte, Getränke...">
-            <input type="file" name="uploadfile1" id="">
-        </div>
-        <input id="plusBTN" type="button" value="+" onclick="addFile()">
-        <input type="submit" value="weiter">
-    </form>
+<%- include('partials/head.ejs') %>
+
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs', {user}) %>
+    <main class="mainInput">
+        <section class="companyText">
+            <h1 class="h1">Sag uns etwas über <br> dein <%= user.typeOfIndustry %></h1>
+            <h3 class="h3">Wie viele Tische hast du? Danach ergibt sich die Anzahl der QR-Codes die wir dir erstellen!
+            </h3>
+        </section>
+        <section class="companyInput">
+            <div class="inputTitels">
+                <p>Dein Upload</p>
+                <p>How many tabels?</p>
+            </div>
+            <% if (user.signUp) { %>
+                <form action="/company/input04/first" enctype="multipart/form-data" method="post">
+            <% } else { %>
+                <form action="/company/input04/update" enctype="multipart/form-data" method="post">
+            <% } %>
+                    <div id="inputFileBox">
+                        <div class="inputField">
+                            <input type="text" name="fileTitle1" id=""
+                                placeholder="File Name z.B. Speisekarte, Getränke...">
+                            <input type="file" name="uploadfile1" id="">
+                        </div>
+                    </div>
+                    <input id="plusBTN" type="button" value="+" onclick="addFile()">
+                    <div class="weiterButton">
+                        <input type="submit" value="weiter">
+                    </div>
+                </form>
+        </section>
+    </main>
     <script>
         let count = 1
-        function addFile(){
+        function addFile() {
             count++
             document.getElementById("inputFileBox").innerHTML += `
+            <div class="inputField">
             <input type="text" name="fileTitle${count}" id="" placeholder="File Name z.B. Speisekarte, Getränke...">
             <input type="file" name="uploadfile${count}" id="">
+            </div>
             `
-            if(count == 3){
+            if (count == 3) {
                 document.getElementById("plusBTN").style.display = "none"
                 return
             }
         }
     </script>
 </body>
+
 </html>

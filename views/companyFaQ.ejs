@@ -1,11 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    FaQ
+<%- include('partials/head.ejs') %>
+
+<body class="bodyCompany faqBody">
+    <header class="header">
+        <img src="/img/arrow.svg" alt="">
+        <img src="/img/clock.svg" alt="">
+        <div>  </div>
+    </header>
+    <main class="mainWaves">
+        <section class="companyText">
+            <h3 class="h3" style="text-align: center;">FAQ Yourself</h3>
+        </section>
+        <section class="settingField">
+            <section class="settingLinks">
+                <article class="faq">
+                    <div>
+                        <h1 class="h1">Wer verbirgt sich hinter der Infotime-App?</h1>
+                        <h1 class="h1" id="toggle-Btn1">+</h1>
+                    </div>
+                </article>
+                <article id="faqShowAnswer1" class="hide">
+                    <p>Die Infotime-App ist ein Startup-Projekt, das aus vier Teilnehmern einer IT-Fortbildung für
+                        Web-Entwicklung entstanden
+                        ist. Im Rahmen eines Projekts haben die vier Teilnehmer gemeinsam dies App entwickelt, um eine
+                        innovative Lösung zu
+                        einem aktuellen Thema aus der Gesellschaft anzubieten.</p>
+                </article>
+            </section>
+
+            <section class="settingLinks">
+                <article class="faq">
+                    <div>
+                        <h1 class="h1">Warum brauchen wir die Infotime-App?</h1>
+                        <h1 class="h1" id="toggle-Btn2">+</h1>
+                    </div>
+                </article>
+                <article id="faqShowAnswer2" class="hide">
+                    <p>Wer kennt es nicht? Seit der Corona-Krise ist es nötig, beim Besuch von Restaurants, Cafés seine
+                        persönlichen Daten auf
+                        einem Blatt Papier zu hinterlassen, um im Infektionsfall alle möglichen Kontaktpersonen zu
+                        ermitteln. Die Infotime-App
+                        bietet Vorteile für Endnutzer sowie für Geschäftsinhaber, z.B. von Restaurants, Bars und
+                        Friseursalons.
+                    </p>
+                </article>
+            </section>
+
+            <section class="settingLinks">
+                <article class="faq">
+                    <div>
+                        <h1 class="h1">Welche persönlichen Daten werden erfasst?</h1>
+                        <h1 class="h1" id="toggle-Btn3">+</h1>
+                    </div>
+                </article>
+                <article id="faqShowAnswer3" class="hide">
+                    <p>Es werden jeweils die folgenden persönliche Daten des Geschäftsinhabers sowie des Endnutzers
+                        erfasst: Name, Straße und
+                        Hausnummer, PLZ und Stadt.
+                        ​
+                        Der Endnutzer muss zusätzlich seine Telefonnummer angeben, weil diese Informationen im Fall
+                        einer Corona-Infektion dann
+                        an das Gesundheitsamt übermittelt werden muss, damit die Kontaktverfolgung durchgeführt werden
+                        kann.
+                        ​
+                        Der Geschäftsinhaber muss zusätzlich zu den oben aufgeführten persönlichen Daten, die Anzahl der
+                        Tische im Restaurant
+                    </p>
+                </article>
+            </section>
+
+
+        </section>
+    </main>
+    <%- include('partials/footerCompany.ejs') %>
+    <script>
+        const faqShowAnswer1 = document.getElementById("faqShowAnswer1")
+        const toggleBtn1 = document.getElementById("toggle-Btn1")
+        toggleBtn1.addEventListener("click", (e) => {
+            e.preventDefault()
+            faqShowAnswer1.classList.toggle('hide')
+        })
+
+        const faqShowAnswer2 = document.getElementById("faqShowAnswer2")
+        const toggleBtn2 = document.getElementById("toggle-Btn2")
+        toggleBtn2.addEventListener("click", (e) => {
+            e.preventDefault()
+            faqShowAnswer2.classList.toggle('hide')
+        })
+
+        const faqShowAnswer3 = document.getElementById("faqShowAnswer3")
+        const toggleBtn3 = document.getElementById("toggle-Btn3")
+        toggleBtn3.addEventListener("click", (e) => {
+            e.preventDefault()
+            faqShowAnswer3.classList.toggle('hide')
+        })
+    </script>
 </body>
+
 </html>

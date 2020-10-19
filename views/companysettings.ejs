@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="/company/qrcode">QR-Codes herunterladen</a>
-    <a href="/company/data">Überprüfung von Firmendaten</a>
+<%- include('partials/head.ejs') %>
+
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs', {user}) %>
+    <main class="mainWaves">
+        <section class="companyText">
+            <h3 class="h3">Möchtest du deine QR-Codes <br> herunterladen oder die Anzahl ändner?</h3>
+        </section>
+        <section class="settingField">
+            <a class="settingLinks" href="/company/qrcode"><span></span> QR-Codes herunterladen</a>
+            <a class="settingLinks" href="/company/data"><span></span>Firmendaten ändern</a>
+        </section>
+    </main>
+    <%- include('partials/footerCompany.ejs') %>
 </body>
+
 </html>

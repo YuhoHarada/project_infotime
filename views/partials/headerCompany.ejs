@@ -1,0 +1,26 @@
+<header class="header">
+    <img src="/img/arrow.svg" alt="">
+    <img src="/img/clock.svg" alt="">
+    <img id="toggleCompanyProfile" src="<%= user.picture %> " alt="">
+    <section id="showUserProfile" class="hide">
+        <ul>
+            <li class="profilename"><%= user.firstName %> <%= user.lastName %></li>
+            <li><a href="/company">Dashboard</a></li>
+            <li><a href="/company/settings">Settings</a></li>
+            <li><a href="/company/faq">Help</a></li>
+            <li><a href="/auth/logout">Sign out</a></li>
+        </ul>
+    </section>
+
+
+</header>
+
+<script>
+    const showUserProfile = document.getElementById("showUserProfile")
+    const toggleCompanyProfile = document.getElementById("toggleCompanyProfile")
+    toggleCompanyProfile.addEventListener("click", (e) => {
+        e.preventDefault()
+        showUserProfile.classList.toggle('hide')
+    })
+
+</script>

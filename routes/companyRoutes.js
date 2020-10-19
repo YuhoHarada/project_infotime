@@ -189,7 +189,7 @@ router.get('/qrcode', async (req, res) => {
         let url = await QRCode.toDataURL(tables[i])
         urlList.push(url)
     }
-    res.render('companyqrCodes', { urlList })
+    res.render('companyqrCodes', { user: req.user, urlList })
 })
 
 router.get('/faq', (req, res) => {

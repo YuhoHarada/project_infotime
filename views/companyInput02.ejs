@@ -1,20 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <% if (user.signUp) { %>
-        <form action="/company/input02/first" method="post">
-    <% } else { %>
-        <form action="/company/input02/update" method="post">
-    <% } %>
-        <input type="text" name="street" placeholder="Straße und Nummer" id="" required>
-        <input type="text" name="postalcode" placeholder="Plz" id="" required>
-        <input type="text" name="city" placeholder="Stadt" id="" required>
-        <input type="submit" value="weiter">
-    </form>
+<%- include('partials/head.ejs') %>
+
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs', {user}) %>
+    <main class="mainInput">
+        <section class="companyText">
+            <h1 class="h1">Sag uns etwas über <br> dein <%= user.typeOfIndustry %></h1>
+            <h3 class="h3">Ein paar Informationen von dir, dann bekommst du alles was du für dein Coronakonformes
+                Restaurant
+                brauchst!</h3>
+        </section>
+        <section class="companyInput">
+            <div class="inputTitels">
+                <p>Deine Adresse</p>
+                <p>Where to find it?</p>
+            </div>
+            <% if (user.signUp) { %>
+                <form action="/company/input02/first" method="post">
+            <% } else { %>
+                <form action="/company/input02/update" method="post">
+            <% } %>
+                <div class="inputField">
+                    <input class="inputTextField" type="text" name="street" placeholder="Straße und Nummer" id=""
+                        required>
+                    <input class="inputTextField" type="text" name="postalcode" placeholder="Plz" id="" required>
+                    <input class="inputTextField" type="text" name="city" placeholder="Stadt" id="" required>
+                </div>
+                <div class="weiterButton">
+                    <input type="submit" value="weiter">
+                </div>
+            </form>
+        </section>
+    </main>
+
 </body>
+
 </html>

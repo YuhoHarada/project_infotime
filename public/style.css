@@ -26,7 +26,7 @@
     font-weight: 700;
 }
 #hero{
-    background: url("/Bilder/Frame.png") bottom/100% 60% no-repeat;
+    background: url("/img/Frame.png") bottom/100% 60% no-repeat;
     height: calc(100vh - 40px) ;
     display: flex;
     flex-direction: column;
@@ -159,3 +159,54 @@
     color: #B1BFCC;
     margin-top: 25vh;
 }
+@media only screen and (max-width: 375px){
+    #welcomeH{
+        font-size: 1.4em;
+        width: 60%;
+        margin: 0 auto;
+    }
+    #welcomeP{
+        width: 80%;
+        text-align: left;
+        color: #90A4B7;
+        margin: 0 auto;
+    }
+    .welcomeA{
+        margin: 9vh auto;
+        width: 58%;
+    }
+    #aFragen{
+        margin-top: 20vh;
+    }
+}
+@media only screen and (max-width: 320px){
+    #welcomeH{
+        font-size: 1.4em;
+        width: 70%;
+        margin: 0 auto;
+    }
+    #aFragen{
+        margin-top: 12vh;
+    }
+}
+
+
+
+
+
+/*Yahya*/
+
+/*FAQS*/
+        .faq_question {
+            margin: 0px;
+            padding: 0px 0px 5px 0px;
+            display: inline-block;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .faq_answer_container {
+            height: 0px;
+            overflow: hidden;
+            padding: 0px;
+        }
