@@ -1,17 +1,38 @@
-<%- include('partials/head.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styleCompany.css">
+    <link rel="stylesheet" href="/qrcodeStyle.css">
+    <title>Document</title>
+</head>
 
 <body class="bodyCompany">
     <%- include('partials/headerCompany.ejs', {user}) %>
     <main class="mainQr">
         <section class="companyText">
             <h3 class="h3" style="text-align: center;">Deine QR Codes</h3>
+            <a class="welcomeA" onclick="window.print();">Drucken</a>
         </section>
         <section class="qrField">
             <% urlList.forEach((elt, i) => { %>
-                <figure>
-                    <img src="<%= elt %> " alt="">
-                    <figcaption>Tisch <%= i + 1 %> </figcaption>
-                </figure>
+                <div class="qrcode">
+                    <img class="logo" src="<%= user.logo %> " alt="">
+                    <h1><%= user.companyName %> </h1>
+                    <figure>
+                        <img class="qr" src="<%= elt %> " alt="">
+                        <figcaption>Tisch <%= i + 1 %> </figcaption>
+                    </figure>
+                    <div>
+                        <h2>1. QR-Code scannen</h2>
+                        <h2>2. persönlichen Daten eingeben</h2>
+                        <h2>3. Speisekarte sehen</h2>
+                        <h2>4. Bestellen</h2>
+                        <h2>5. Guten Appetit!!</h2>
+                    </div>
+                </div>
             <% }) %>
         </section>
     </main>
