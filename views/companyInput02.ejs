@@ -1,12 +1,33 @@
 <%- include('partials/head.ejs') %>
 
-<body>
-    <form action="/company/input02" method="post">
-        <input type="text" name="street" placeholder="Straße und Nummer" id="" required>
-        <input type="text" name="postalcode" placeholder="Plz" id="" required>
-        <input type="text" name="city" placeholder="Stadt" id="" required>
-        <input type="submit" value="weiter">
-    </form>
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs') %>
+    <main class="mainInput">
+        <section class="companyText">
+            <h1 class="h1">Sag uns etwas über <br> dein !EJS Restaurant!</h1>
+            <h3 class="h3">Ein paar Informationen von dir, dann bekommst du alles was du für dein Coronakonformes
+                Restaurant
+                brauchst!</h3>
+        </section>
+        <section class="companyInput">
+            <div class="inputTitels">
+                <p>Deine Adresse</p>
+                <p>Where to find it?</p>
+            </div>
+            <form action="/company/input02" method="post">
+                <div class="inputField">
+                    <input class="inputTextField" type="text" name="street" placeholder="Straße und Nummer" id=""
+                        required>
+                    <input class="inputTextField" type="text" name="postalcode" placeholder="Plz" id="" required>
+                    <input class="inputTextField" type="text" name="city" placeholder="Stadt" id="" required>
+                </div>
+                <div class="weiterButton">
+                    <input type="submit" value="weiter">
+                </div>
+            </form>
+        </section>
+    </main>
+
 </body>
 
 </html>

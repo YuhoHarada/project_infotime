@@ -1,9 +1,18 @@
 <%- include('partials/head.ejs') %>
 
-<body>
-    <% urlList.forEach(elt => { %>
-    <img src="<%= elt %> " alt="">
-    <% }) %>
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs') %>
+    <main class="mainWaves">
+        <section class="companyText">
+            <h3 class="h3" style="text-align: center;">Deine QR Codes</h3>
+        </section>
+        <section class="qrField">
+            <% urlList.forEach(elt => { %>
+            <img src="<%= elt %> " alt="">
+            <% }) %>
+        </section>
+    </main>
+    <%- include('partials/footerCompany.ejs') %>
 </body>
 
 </html>

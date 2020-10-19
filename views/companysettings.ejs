@@ -1,7 +1,17 @@
 <%- include('partials/head.ejs') %>
 
-<body>
-    <a href="/company/qrcode">QR-Codes herunterladen</a>
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs') %>
+    <main class="mainWaves">
+        <section class="companyText">
+            <h3 class="h3">Möchtest du deine QR-Codes <br> herunterladen oder die Anzahl ändner?</h3>
+        </section>
+        <section class="settingField">
+            <a class="settingLinks" href="/company/qrcode"><span></span> QR-Codes herunterladen</a>
+            <a class="settingLinks" href=""><span></span>QR-Codes ändern</a>
+        </section>
+    </main>
+    <%- include('partials/footerCompany.ejs') %>
 </body>
 
 </html>

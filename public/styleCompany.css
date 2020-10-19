@@ -3,6 +3,29 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
+.bodyCompany{
+    height: 100vh;
+}
+.h1{
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #414B6B;
+    margin-bottom: 10px;
+}
+.h3{
+    color: #90A4B7;
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 25px;
+}
+.show{
+    display: inline;
+}
+.hide{
+    display: none;
+}
+
+
 
 .header{
     height: 15vh;
@@ -27,35 +50,156 @@
 }
 
 
-.main h1{
-    font-size: 1.4em;
-    font-weight: 600;
-    color: #414B6B;
-    margin-bottom: 10px;
+/*Header User Profile*/
+#header{
+    position: relative;
 }
-.main h3{
-    color: #90A4B7;
-    font-size: 1em;
-    font-weight: normal;
+#showUserProfile{
+    transform: translateY(100px);
 }
-.main{
+
+
+
+
+.mainInput{
     display: grid;
-    grid-template-rows: 25vh 35vh;
+    grid-template-rows: 25vh 60vh;
 }
 
 
+
+/*All Company Inputs*/
 .companyText{
-    margin: 0 5%;
-    background-color: yellow;
+    margin: 3vh 10%;
+    height: 100%;
 }
 .companyInput{
     background-color: #F9F9F9;
-    margin: 5vh 5%;
+    padding: 0 5%;
+    position: relative;
+    height: 100%;
+}
+.inputTitels{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 15px;
+}
+.inputTitels p:last-of-type{
+    color: #FB818B;
+}
+.inputTextField{
+    background-color: white;
+    width: 100%;
+    padding: 20px 0 20px 0px;
+    border: none;
+    border-radius: 2%;
+    font-size: 1.2em;
+    box-shadow: 0px 6px 18px rgba(144, 164, 183, 0.22);
+    border-radius: 4px;
+}
+::placeholder{
+    color: #93A6B9;
+    padding-left: 15px;
 }
 
 
-
-
+.inputField input{
+    margin: 20px 0 15px;
+    border-color: #93A6B9;
+    
+}
+.inputField label{
+    font-size: 1.4em;
+    color: #93A6B9;
+    padding-left: 10px;
+}
 .weiterButton{
-    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+
+    height: 8vh;
+    width: 100%;
+  
+    margin-left: -5%;
+    color: white;
+    background-color: red;
+    border: none;  
+}
+.weiterButton input{
+    color: white;
+    background-color: red;
+    border: none;
+    font-size: 1.6em;
+}
+
+
+/*Dashboard/Settings*/
+.mainWaves{
+    display: grid;
+    grid-template-rows: 15vh 55vh;
+}
+.settingField{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    background-color: #F9F9F9;
+}
+.settingLinks{
+    background-color: white;
+    width: 100%;
+    padding: 20px 0 20px;
+    font-size: 1.2em;
+    box-shadow: 0px 6px 18px rgba(144, 164, 183, 0.22);
+    border-radius: 4px;
+    color: #93A6B9;
+    margin: 10px 0;
+    text-decoration: none;
+}
+.settingLinks a{
+    text-decoration: none;
+    color: #93A6B9;
+}
+.settingLinks span{
+    padding-left: 5%;
+}
+.footerWaves img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    background-color: #F9F9F9;
+}
+
+
+/*QR Codes*/
+.qrField{
+    display: flex;
+    padding: 10px 5%;
+    background-color: #F9F9F9;
+    gap: 20px;
+}
+.qrField img{
+    object-fit: cover;
+    height: 114px;
+}
+
+
+/*FAQ*/
+
+.faq div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+.faqField{
+     
+    padding: 0 5%;
+    background-color: #F9F9F9;
+}
+.faqBody{
+    overflow-y: scroll;
 }

@@ -1,10 +1,29 @@
 <%- include('partials/head.ejs') %>
 
-<body>
-    <form action="/company/input03" method="post">
-        <input type="number" name="tables" placeholder="0-100 Tische" id="" required>
-        <input type="submit" value="weiter">
-    </form>
+<body lass="bodyCompany">
+    <%- include('partials/headerCompany.ejs') %>
+    <main class="mainInput">
+        <section class="companyText">
+            <h1 class="h1">Sag uns etwas über <br> dein !EJS Restaurant!</h1>
+            <h3 class="h3">Wie viele Tische hast du? Danach ergibt sich die Anzahl der QR-Codes die wir dir erstellen!
+            </h3>
+        </section>
+        <section class="companyInput">
+            <div class="inputTitels">
+                <p>Tischzahl</p>
+                <p>How many tables?</p>
+            </div>
+            <form action="/company/input03" method="post">
+                <div class="inputField">
+                    <input class="inputTextField" type="number" name="tables" placeholder="0-100 Tische" id="" required>
+                </div>
+                <div class="weiterButton">
+                    <input type="submit" value="weiter">
+                </div>
+            </form>
+        </section>
+    </main>
+
 </body>
 
 </html>

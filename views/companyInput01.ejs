@@ -1,37 +1,36 @@
 <%- include('partials/head.ejs') %>
 
 <body class="bodyCompany">
-    <header class="header">
-        <img src="/img/arrow.svg" alt="">
-        <img src="/img/clock.svg" alt="">
-        <img src="/img/profilepic.svg" alt="">
-    </header>
-    <main id="mainInput01" class="main">
+    <%- include('partials/headerCompany.ejs') %>
+    <main class="mainInput">
         <section class="companyText">
-            <h1>Sag uns etwas über <br> dein Geschäft!</h1>
-            <h3>Was für ein Geschäft hast du? Und wo ist es zuhause?</h3>
+            <h1 class="h1">Sag uns etwas über <br> dein Geschäft!</h1>
+            <h3 class="h3">Was für ein Geschäft hast du? Und wo ist es zuhause?</h3>
         </section>
         <section class="companyInput">
-            <div>
+            <div class="inputTitels">
+                <p></p>
                 <p>Where to find it?</p>
             </div>
-            <form action="">
-                <form action="/company/input01" method="post">
-                    <div>
-                        <input type="text" name="companyName" id="" placeholder="Firmenname" required>
-                    </div>
-                    <div class="inputField">
-                        <input type="radio" name="typeOfIndustry" id="restaurant" value="restaurant" checked>
-                        <label for="restaurant">Restaurant</label>
-                        <input type="radio" name="typeOfIndustry" id="bar" value="bar">
-                        <label for="bar">Bar</label>
-                        <input type="radio" name="typeOfIndustry" id="friseur" value="friseur">
-                        <label for="friseur">Friseur</label>
-                    </div>
-                    <div class="weiterButton">
-                        <input type="submit" value="weiter">
-                    </div>
-                </form>
+            <form action="/company/input01" method="post">
+                <div>
+                    <input class="inputTextField" type="text" name="companyName" id="" placeholder="Firmenname..."
+                        required>
+                </div>
+                <div class="inputField">
+                    <input type="radio" name="typeOfIndustry" id="restaurant" value="restaurant" checked>
+                    <label for="restaurant">Restaurant</label>
+                    <br>
+                    <input type="radio" name="typeOfIndustry" id="bar" value="bar">
+                    <label for="bar">Bar</label>
+                    <br>
+                    <input type="radio" name="typeOfIndustry" id="friseur" value="friseur">
+                    <label for="friseur">Friseur</label>
+                </div>
+                <div class="weiterButton">
+                    <input type="submit" value="Weiter">
+                </div>
+            </form>
         </section>
     </main>
 </body>
