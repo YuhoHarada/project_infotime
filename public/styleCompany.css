@@ -86,7 +86,10 @@
     display: grid;
     grid-template-rows: 25vh 60vh;
 }
+.mainInput04{
+ 
 
+}
 
 
 /*All Company Inputs*/
@@ -156,8 +159,19 @@
     border: none;
     font-size: 1.6em;
 }
+.marginAbstand{
+    display: block;
+    margin: 0 0 200px;
+}
 
 
+/*Input04*/
+.companyInput04{
+    background-color: #F9F9F9;
+    padding: 0 5%;
+    position: relative;
+    min-height: 60vh;
+}
 /*Dashboard/Settings*/
 .mainWaves{
     display: grid;
@@ -216,6 +230,10 @@
     object-fit: cover;
     height: 114px;
 }
+.gutenAppetit{
+    text-align: center;
+    color: #FB818B;
+}
 
 /* Dashboard*/
 .dashboardField{
@@ -264,7 +282,9 @@
 .mainInput04{
     display: grid;
     grid-template-rows: 25vh auto;
+
 }
+
 
 .input04{
     background-color: white;
@@ -283,8 +303,13 @@
 }
 .plus{
     padding: 5px;
+    margin: 7vh 0 10vh;
+    display: block;
 }
 
+#inputFileBox div:nth-of-type(3){
+    margin-bottom: 10vh;
+}
 
 
 /*Header User*/
@@ -329,7 +354,8 @@
         height: 30%;
 
     }
-    .settingLinks:hover{
+    
+    .hoverdRed:hover{
         color: #FB818B;
         transition: color ease-in .3s;
         font-weight: bold;
