@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.welcomeA{
+    margin: 10px auto;
+}
+.qrField{
+    display: block;
+}
+.qrField .qrcode{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0;
+}
+.qrField .qrcode .logo{
+    height: 3cm;
+    width: 80%;
+    margin-bottom: 1cm;
+    object-fit: contain;
+}
+.qrField .qrcode h1{
+    margin-bottom: 3cm;
+    color: #FE979C;
+}
+.qrField .qrcode figure{
+    margin-bottom: 3cm;
+}
+.qrField .qrcode figcaption{
+    text-align: center;
+}
+.qrField .qrcode .qr{
+    width: 5cm;
+    height: 5cm;
+}
+.qrField .qrcode h2{
+    margin-bottom: 5mm;
+}
+@media print {
+    header.header {
+        display: none;
+    }
+    .companyText{
+        display: none;
+    }
+    .qrField{
+        padding: 0;
+    }
+    .qrField .qrcode{
+        height: 277mm;
+        padding: 0;
+        margin: 0;
+    }
+}
+@page {
+    size : A4 portrait;
+	margin: 10mm;
+}

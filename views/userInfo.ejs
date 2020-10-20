@@ -10,7 +10,7 @@
 
 <body>
     <img id="clockForm" src="/Bilder/clockForm.svg" alt="">
-    <p id="pForm">Wir brauchen ein parr Informationen um dich an deinem Platz anmelden zu können!</p>
+    <p id="pForm">Wir brauchen ein par Informationen um dich an deinem Platz anmelden zu können!</p>
     <section id="hero">
         <form action="/user/userInfo/<%= companyID %>/<%= tableID %>" method="post">
             <input class="groeße" type="text" name="name" id="" placeholder="Name..." required>
@@ -18,7 +18,7 @@
             <input class="groeße" type="text" name="postalcode" id="" placeholder="PLZ..." required>
             <input class="groeße" type="text" name="city" id="" placeholder="Stadt..." required>
             <input class="groeße" type="text" name="phone" id="" placeholder="Telefonnummer..." required>
-            <input id="rad" type="checkbox" name="agb" id="" required><label id="dsg" for="agb"><a href="#">DSGvO & AGBs</a></label>
+            <input id="rad" type="checkbox" name="agb" id="" required><label id="dsg" for="agb"><a href="/DSGVO.pdf" target="_blank">DSGvO</a> & <a href="/AGB.pdf" target="_blank">AGBs</a></label>
             <input id="weiterForm" type="submit" value="Weiter">
         </form>
     </section>
