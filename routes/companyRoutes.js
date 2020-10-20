@@ -15,7 +15,7 @@ const checkAuth = (req, res, next) => {
 }
 
 router.get('/', checkAuth, (req, res) => {
-    Customer.find({ companyId: req.user.id })
+    Customer.find({ companyId: req.user.id }).sort({ _id: -1 })
         .then(result => {
             res.render('companydashboard', { user: req.user, customer: result })
         })
