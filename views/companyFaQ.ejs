@@ -1,16 +1,12 @@
 <%- include('partials/head.ejs') %>
 
 <body class="bodyCompany faqBody">
-    <header class="header">
-        <img src="/img/arrow.svg" alt="">
-        <img src="/img/clock.svg" alt="">
-        <div>  </div>
-    </header>
-    <main class="mainWaves">
+    <%- include('partials/headerCompany.ejs', {user}) %>
+    <main class="mainScrollDown">
         <section class="companyText">
             <h3 class="h3" style="text-align: center;">FAQ Yourself</h3>
         </section>
-        <section class="settingField">
+        <section class="faqField">
             <section class="settingLinks">
                 <article class="faq">
                     <div>
@@ -67,11 +63,9 @@
                     </p>
                 </article>
             </section>
-
-
         </section>
     </main>
-    <%- include('partials/footerCompany.ejs') %>
+
     <script>
         const faqShowAnswer1 = document.getElementById("faqShowAnswer1")
         const toggleBtn1 = document.getElementById("toggle-Btn1")

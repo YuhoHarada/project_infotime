@@ -193,7 +193,7 @@ router.get('/qrcode', async (req, res) => {
 })
 
 router.get('/faq', (req, res) => {
-    res.render('companyFaQ')
+    res.render('companyFaQ', { user: req.user })
 })
 
 router.get('/settings', (req, res) => {

@@ -2,7 +2,7 @@
 
 <body class="bodyCompany">
     <%- include('partials/headerCompany.ejs', {user}) %>
-    <main class="mainInput">
+    <main class="mainInput04">
         <section class="companyText">
             <h1 class="h1">Sag uns etwas über <br> dein <%= user.typeOfIndustry %></h1>
             <h3 class="h3">Wie viele Tische hast du? Danach ergibt sich die Anzahl der QR-Codes die wir dir erstellen!
@@ -14,18 +14,18 @@
                 <p>How many tabels?</p>
             </div>
             <% if (user.signUp) { %>
-                <form action="/company/input04/first" enctype="multipart/form-data" method="post">
-            <% } else { %>
+            <form action="/company/input04/first" enctype="multipart/form-data" method="post">
+                <% } else { %>
                 <form action="/company/input04/update" enctype="multipart/form-data" method="post">
-            <% } %>
+                    <% } %>
                     <div id="inputFileBox">
                         <div class="inputField">
-                            <input type="text" name="fileTitle1" id=""
-                                placeholder="File Name z.B. Speisekarte, Getränke...">
+                            <input class="input04" type="text" name="fileTitle1" id=""
+                                placeholder="File Name z.B. Speisekarte,...">
                             <input type="file" name="uploadfile1" id="">
                         </div>
                     </div>
-                    <input id="plusBTN" type="button" value="+" onclick="addFile()">
+                    <input class="plus" id="plusBTN" type="button" value="+" onclick="addFile()">
                     <div class="weiterButton">
                         <input type="submit" value="weiter">
                     </div>
@@ -38,7 +38,7 @@
             count++
             document.getElementById("inputFileBox").innerHTML += `
             <div class="inputField">
-            <input type="text" name="fileTitle${count}" id="" placeholder="File Name z.B. Speisekarte, Getränke...">
+            <input class="input04" type="text" name="fileTitle${count}" id="" placeholder="File Name z.B. Speisekarte,..">
             <input type="file" name="uploadfile${count}" id="">
             </div>
             `

@@ -1,31 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('partials/head.ejs') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    dashboard <br>
-    <div>
-        <a href="/company">dashboard</a>
-        <a href="/company/settings">settings</a>
-        <a href="/company/faq">Help</a>
-        <a href="/auth/logout">Sign out</a>
-    </div>
-    <% customer.forEach(elt => { %>
-    <div>
-        Table: <%= elt.table %> <br>
-        From: <%= elt.stayFromStr %> <br>
-        To: <%= elt.stayToStr %> <br>
-        <br>
-        Name: <%= elt.userName %> <br>
-        Address: <%= elt.userStreet %>, <%= elt.userCode %> <%= elt.userCity %> <br>
-        Phone: <%= elt.userPhone %> <br>
-    </div><br><br>
-    <% }) %>
+<body class="bodyCompany">
+    <%- include('partials/headerCompany.ejs', {user}) %>
+    <main class="mainScrollDown">
+        <section class="companyText">
+            <h3 class="h3" style="text-align: center;">Dashboard</h3>
+        </section>
+        <section class="dashboardField">
+            <% customer.forEach(elt => { %>
+            <div>
+                <p>Table: <%= elt.table %></p>
+                <p>From: <%= elt.stayFromStr %></p>
+                <p>To: <%= elt.stayToStr %></p>
+                <p>Name: <%= elt.userName %></p>
+                <p>Address: <%= elt.userStreet %>, <%= elt.userCode %> <%= elt.userCity %></p>
+                <p>Phone: <%= elt.userPhone %></p>
+            </div>
+            <% }) %>
+        </section>
+    </main>
 </body>
 
 </html>
