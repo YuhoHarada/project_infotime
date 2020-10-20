@@ -112,8 +112,9 @@
 }
 .inputTextField{
     background-color: white;
-    width: 100%;
-    padding: 20px 0 20px 0px;
+    width: 97%;
+    padding: 20px 0 20px;
+     padding: 20px 0 20px 3%;
     border: none;
     border-radius: 2%;
     font-size: 1.2em;
@@ -122,8 +123,11 @@
 }
 ::placeholder{
     color: #93A6B9;
-    padding-left: 15px;
+    padding-left: 20px;
+    padding-left: 0;
 }
+
+
 
 
 .inputField input{
@@ -377,5 +381,22 @@
     }
 
 
+    .inputTextField{
+    width: 97%;
+    padding: 20px 0 20px 3%;
+    border: none;
+    border-radius: 2%;
+    font-size: 1.2em;
+    box-shadow: 0px 6px 18px rgba(144, 164, 183, 0.22);
+    border-radius: 4px;
+    }
+    .inputTextField::placeholder{
+        padding-left: 0;
+    }
+
+    /*HOVER PROFILE*/
+    #showUserProfile ul a:hover{
+        color: #FB818B;
+    }
 }
 
