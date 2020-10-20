@@ -131,6 +131,7 @@
 #userThanks #welcomeP{
     display: inline-block;
     width: 80vw;
+    text-align: center;
 }
 .welcomeA{
     display: flex;

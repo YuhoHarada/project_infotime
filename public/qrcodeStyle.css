@@ -40,6 +40,9 @@
 .qrField .qrcode h2{
     margin-bottom: 5mm;
 }
+.mainScrollDown{
+    grid-template-rows: auto auto;
+}
 @media print {
     header.header {
         display: none;

@@ -80,6 +80,7 @@ a{
     color: #90A4B7;
 }
 #companyAbout.companyData #hero1{
+    margin-top: 20vh;
     padding-bottom: 30vh;
 }
 #companyAbout #hero1 h1{
