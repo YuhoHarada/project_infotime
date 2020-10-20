@@ -346,9 +346,9 @@
      background: 251,129,139,1;
     }
     .dashboardField{
-    min-height: 40vh;
-    background: url('/Bilder/BgUser.png') center bottom -150px/contain no-repeat,
-                    linear-gradient(#F9F9F9 0%, #F9F9F9 100%);
+    min-height: 70vh;
+    background-size: 100%;
+    background-position: center bottom -55vw;
     padding-bottom: 22vh;
     }
 
