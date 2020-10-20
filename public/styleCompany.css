@@ -254,6 +254,12 @@
 .faqBody{
     overflow-y: scroll;
 }
+@media only screen and (min-width: 575px){
+    .faqField{
+        background-size: 100%;
+        background-position: center bottom -55vw;
+    }
+}
 
 /*Input 01*/
 .companyInput01LogoUpload{
