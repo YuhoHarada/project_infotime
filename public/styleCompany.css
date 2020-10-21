@@ -277,8 +277,8 @@
 .faqBody{
     overflow-y: scroll;
 }
-@media only screen and (min-width: 575px){
-    .faqField{
+@media only screen and (min-width: 500px){
+    .dashboardField, .faqField{
         background-size: 100%;
         background-position: center bottom -55vw;
     }
@@ -301,6 +301,7 @@
     background-color: white;
     width: 100%;
     padding: 20px 0 20px;
+    padding: 20px 0 20px 3%;
     font-size: 1.2em;
     box-shadow: 0px 6px 18px rgba(144, 164, 183, 0.22);
     border-radius: 4px;
